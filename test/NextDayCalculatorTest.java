@@ -60,6 +60,17 @@ class NextDayCalculatorTest {
     }
 
     @Test
+    @DisplayName("Case: 31-12-2018")
+    public void testNextDay_31122018() {
+        int inputDay = 31;
+        int inputMonth = 12;
+        int inputYear = 2018;
+        String expected = "1-1-2019";
+        String result = NextDayCalculator.nextDay(inputDay, inputMonth, inputYear);
+        assertEquals(expected, result);
+    }
+
+    @Test
     @DisplayName("Case: 02/2020")
     public void testLastOfMonth() {
         int inputMonth = 2;
